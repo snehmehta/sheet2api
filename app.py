@@ -6,7 +6,18 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {
+        "status" : "success",
+        "message": "Hello World ! Welcome to sheet to api",
+        "instruction" : 
+            {
+                "૧" : "Publish your google sheet",
+                "૨" : "Copy your sharing google sheet url which without restriction",
+                "૩" : "Go to https://sheet2api.herokuapp.com/sheetapi?url=YOUR-COPIED-GOOGLE-SHARING-LINK",
+                "૪" : "Voilia !! Enjoy your data"
+            }
+        
+    }
 
 
 @app.get('/sheetapi')
